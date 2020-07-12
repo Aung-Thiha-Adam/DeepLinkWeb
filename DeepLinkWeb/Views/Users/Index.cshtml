@@ -1,0 +1,12 @@
+﻿@model IEnumerable<User>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Users</h2>
+
+
+@foreach(var u in Model)
+{
+    <div><a href="/users/details/@u.Id"> @u.Id </a> | @u.Name </div>
+}
